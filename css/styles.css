@@ -1,0 +1,1145 @@
+/* ======================================================
+   TEMA OSCURO - MI LUNA (CSS OPTIMIZADO)
+   ====================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  /* --- COLORES PRINCIPALES --- */
+  --pink-primary: #ef2a8c;   /* Color principal: botones, precio, logo, destacados */
+  --pink-hover: #c61766;     /* Color de botones al pasar el mouse */
+  --pink-light: #fbcfe8;     /* Etiquetas y textos suaves */
+
+  /* --- FONDOS --- */
+  --bg-dark: #0f0d14;        /* Fondo principal de la web */
+  --bg-header: #15131e;      /* Fondo del menú superior */
+  --bg-card: #191624;        /* Fondo de tarjetas de producto */
+  --bg-card-hover: #221e31;  /* Fondo de tarjeta al pasar el mouse */
+
+  /* --- TEXTOS Y BORDES --- */
+  --text-white: #ffffff;     /* Texto principal */
+  --text-muted: #9ca3af;     /* Texto secundario / gris */
+  --border-color: #2a2638;   /* Líneas de división y bordes */
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ======================================================
+   1. NAVBAR Y NAVEGACIÓN
+   ====================================================== */
+.navbar {
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  background-color: var(--pink-primary);
+  color: var(--text-white);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.brand-text h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.brand-text span {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* SEARCH BOX */
+.search-box {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 16px 10px 38px;
+  background-color: #1f1b2d;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-white);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: var(--pink-primary);
+}
+
+/* NAV ACTIONS */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  color: var(--pink-primary);
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.nav-link-btn:hover {
+  color: var(--pink-primary);
+}
+
+.cart-btn {
+  background-color: var(--pink-primary);
+  color: var(--text-white);
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.cart-btn:hover {
+  background-color: var(--pink-hover);
+}
+
+.cart-badge {
+  background-color: var(--text-white);
+  color: var(--pink-primary);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* ======================================================
+   2. HERO SECTION
+   ====================================================== */
+.hero-section {
+  padding: 60px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--pink-primary);
+  background-color: rgba(239, 42, 140, 0.1);
+  color: #daabca !important; 
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text-col h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero-text-col .highlight {
+  color: var(--pink-primary);
+}
+
+.hero-text-col p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+/* BOTONES GENERALES */
+.btn {
+  padding: 12px 26px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-pink {
+  background-color: #d11875e4; /* Muestra cuadradito en VS Code (var(--pink-primary)) */
+  color: #ffffff;            /* Muestra cuadradito en VS Code (var(--text-white)) */
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #d81b75; /* Muestra cuadradito en VS Code (var(--pink-hover)) */
+}
+
+.btn-outline {
+  border: 1px solid #a73c43;  /* Muestra cuadradito en VS Code */
+  color: #daabca !important; 
+  background: rgba(239, 42, 140, 0.05); 
+}
+
+.btn-outline:hover {
+  background-color: #d81b75; 
+  color: #ffffff;            
+}
+
+/* HERO CARD */
+.hero-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.hero-card img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-card-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #0f0d1dbe; /* Muestra el cuadradito de color en VS Code (equivalente a 75% opacidad) */
+  backdrop-filter: blur(10px);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #ffffff1a; /* Muestra el cuadradito de color del borde */
+}
+
+.caption-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--pink-primary);
+  letter-spacing: 1px;
+}
+
+.hero-card-caption h3 {
+  font-size: 1.1rem;
+  margin: 4px 0;
+}
+
+.hero-card-caption p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ======================================================
+   3. CATALOGO Y FILTROS
+   ====================================================== */
+.catalog-section {
+  max-width: 1280px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.catalog-header h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.product-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.catalog-sort select {
+  background-color: #1f1b2d;
+  color: var(--text-white);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.category-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #1f1b2d;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.filter-btn.active, 
+.filter-btn:hover {
+  background-color: var(--pink-primary);
+  color: var(--text-white);
+  border-color: var(--pink-primary);
+}
+
+/* ======================================================
+   4. GRILLA DE PRODUCTOS Y TARJETAS (CONTROL TOTAL DE COLORES)
+   ====================================================== */
+
+/* ------------------------------------------------------
+   CONTENEDOR GRILLA
+   ------------------------------------------------------ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ------------------------------------------------------
+   TARJETA PRINCIPAL (EL CUADRADO DEL PRODUCTO)
+   ------------------------------------------------------ */
+.product-card {
+  background-color: #191624;       /* Fondo de la tarjeta */
+  border: 1px solid #2a2638;       /* Borde de la tarjeta */
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  background-color: #221e31;       /* Fondo de la tarjeta al pasar el mouse */
+  border-color: #9e1e3a;           /* Borde al pasar el mouse */
+}
+
+/* ------------------------------------------------------
+   IMAGEN Y BORDES SUPERIORES
+   ------------------------------------------------------ */
+.card-image-wrap {
+  position: relative;
+  height: 240px;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------------
+   ETIQUETA SUPERIOR (EJ: CONJUNTOS, PIJAMAS)
+   ------------------------------------------------------ */
+.badge-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.badge-pink {
+  background-color: #ef2a8c;       /* Fondo de la etiqueta rosada */
+  color: #ffffff;                  /* Texto de la etiqueta */
+}
+
+/* ------------------------------------------------------
+   BOTÓN CORAZÓN (FAVORITOS)
+   ------------------------------------------------------ */
+.wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #00000080;     /* Fondo del círculo (Negro semitransparente) */
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;                  /* Color del ícono del corazón */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.wishlist-btn:hover {
+  background-color: #ef2a8c;       /* Fondo al pasar el mouse */
+  color: #ffffff;                  /* Ícono al pasar el mouse */
+}
+
+/* ------------------------------------------------------
+   TEXTOS Y RATING (CUERPO DE LA TARJETA)
+   ------------------------------------------------------ */
+.card-body {
+  padding: 16px;
+}
+
+.card-top-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #9ca3af;                  /* Texto de categoría (EJ: CONJUNTOS) */
+  margin-bottom: 6px;
+}
+
+.rating {
+  color: #c8c33c;                  /* Color de la estrella y número del rating */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  height: 42px;
+  overflow: hidden;
+  color: #ffffff;                  /* Título/Nombre del producto */
+}
+
+/* ------------------------------------------------------
+   CHIPS / BOTONES DE TALLES (85, 90, 95, S, M, L)
+   ------------------------------------------------------ */
+.size-chips {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.size-chips span {
+  background-color: #272336;       /* Fondo del recuadro de cada talle */
+  color: #9ca3af;                  /* Texto del número/letra del talle */
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ------------------------------------------------------
+   PRECIOS (ACTUAL Y ANTERIOR)
+   ------------------------------------------------------ */
+.card-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 60;
+  color: #51e147;                  /* Color del precio actual */
+}
+
+.old-price {
+  font-size: 0.8rem;
+  color: #9ca3af;                  /* Color del precio tachado */
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+
+/* ------------------------------------------------------
+   BOTÓN AGREGAR AL CARRITO
+   ------------------------------------------------------ */
+.add-cart-btn {
+  background-color: #800b1226;     /* Fondo normal (Rosado semitransparente) */
+  color: #b6b7b6;                  /* Texto e ícono normal */
+  border: 1px solid #ef2a8c;       /* Borde del botón */
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.add-cart-btn:hover {
+  background-color: #ef2a8cb1;       /* Fondo al pasar el mouse (Rosado pleno) */
+  color: #e1dfdf;                  /* Texto e ícono al pasar el mouse */
+}
+
+/* ======================================================
+   5. MODAL Y SIDEBAR
+   ====================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ======================================================
+   6. MEDIA QUERIES (RESPONSIVE)
+   ====================================================== */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================================
+   7. MODO CLARO (LIGHT MODE) - 100% PURE CSS
+   ====================================================== */
+.theme-toggle-input {
+  display: none;
+}
+
+.theme-toggle-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn .fa-moon {
+  display: none;
+}
+
+.theme-toggle-btn {
+  background-color: transparent;
+  color: #f5ca0b;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme-toggle-btn:hover {
+  background-color: #f0eb6719;
+  color: #ebef1d;
+  border-color: #f5ed0b8d;
+}
+
+body:has(#theme-toggle:checked) {
+  --bg-dark: #f8f9fa;
+  --bg-header: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f3f5;
+  --text-white: #111827;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+body:has(#theme-toggle:checked) .search-box input,
+body:has(#theme-toggle:checked) .filter-btn,
+body:has(#theme-toggle:checked) .catalog-sort select {
+  background-color: #f3f4f6;
+}
+
+body:has(#theme-toggle:checked) .btn-outline {
+  color: var(--pink-primary);
+}
+
+body:has(#theme-toggle:checked) .theme-toggle-btn .fa-sun {
+  display: none;
+}
+body:has(#theme-toggle:checked) .theme-toggle-btn .fa-moon {
+  display: inline-block;
+}
+
+body:has(#theme-toggle:checked) .theme-toggle-btn {
+  background-color: #f3f4f6;
+  color: #ba0c63;
+  border: 1px solid #e5e7eb;
+}
+
+body:has(#theme-toggle:checked) .theme-toggle-btn:hover {
+  background-color: #ef2a8c;
+  color: #0f0909;
+  border-color: #ef2a8c;
+}
+/* ==========================================
+   ESTILOS DEL PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.main-footer {
+  background-color: #0b0c10;
+  color: #e0e0e0;
+  padding: 40px 20px 20px;
+  font-family: inherit;
+  border-top: 1px solid #1f2833;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 300px;
+}
+
+.footer-col h3 {
+  color: #df40ed; /* Ajustar este color al tono principal de tu sitio */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-col p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #c5c6c7;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-col i {
+  color: #959493;
+  width: 16px;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #1f2833;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888888;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+}
+
+.footer-bottom a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Adaptación responsive para celulares */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}/* Oculta productos de otras páginas */
+.product-card.is-hidden {
+    display: none !important;
+}
+
+/* Animación suave al cambiar de página */
+.product-card.page-fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor y diseño de los 3 puntitos */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 40px 0 20px 0;
+    width: 100%;
+}
+
+.pagination-btn {
+    background-color: #1a1a20;
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #e91e63;
+    border-color: #e91e63;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.dots-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.page-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.page-dot.active {
+    background-color: #e91e63;
+    width: 10px; /* Puntito activo alargado */
+    border-radius: 10px;
+}
+/* Quita el espacio grande debajo del título del producto */
+.card-body h4 {
+    margin-bottom: 2px !important;
+}
+
+/* ==========================================
+   AJUSTE DE ALTURA Y MÁRGENES EN TARJETAS
+   ========================================== */
+
+/* 1. Ajusta el título para que no reserve espacio de más */
+.card-body h4 {
+    height: auto !important;
+    min-height: 22px;
+    margin-bottom: 0 !important;
+    color: #ffffff;
+}
+
+/* 2. Descripción en el medio con distancias idénticas (1 renglón arriba y abajo) */
+.product-desc {
+    font-size: 0.78rem;
+    color: #9a9ab0;
+    margin-top: 10px !important;    /* Distancia exacta con el título */
+    margin-bottom: 10px !important; /* Distancia exacta con TALLES */
+    line-height: 1.25;
+}
+
+/* Guion medio amarillo centrado naturalmente */
+.product-desc::before {
+    content: "- ";
+    color: #fcb900;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+/* 4. Etiqueta TALLES pegada a los cuadraditos */
+.size-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #b0b0c0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0 !important;
+    margin-bottom: 2px !important;
+}
+
+/* 5. Contenedor de cuadraditos de talles */
+.size-chips {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+/* ==========================================
+   ALINEACIÓN Y ESTIRAMIENTO PERFECTO DE TARJETAS
+   ========================================== */
+
+/* 1. La tarjeta se estira al máximo de la fila */
+.product-card {
+    background-color: #191624;
+    border: 1px solid #2a2638;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+/* 2. El cuerpo ocupa todo el alto y distribuye el espacio */
+.card-body {
+    padding: 16px;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+}
+
+/* 3. Ajuste de título */
+.card-body h4 {
+    height: auto !important;
+    min-height: 22px;
+    margin-top: 4px !important;
+    margin-bottom: 0 !important;
+    color: #ffffff;
+}
+
+/* 4. Descripción en el medio */
+.product-desc {
+    font-size: 0.78rem;
+    color: #9a9ab0;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    line-height: 1.25;
+}
+
+/* Guion medio amarillo */
+.product-desc::before {
+    content: "- ";
+    color: #fcb900;
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+/* 5. EMPUJE AUTOMÁTICO AL FONDO: Si existe la etiqueta TALLES, empuja */
+.size-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #b0b0c0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: auto !important; /* <--- Empuja todo hacia el piso de la tarjeta */
+    margin-bottom: 2px !important;
+}
+
+/* 6. Si NO existe TALLES, los cuadraditos empujan al fondo */
+.size-chips {
+    display: flex;
+    gap: 6px;
+    margin-top: auto; /* <--- Empuja si no hay etiqueta TALLES */
+    margin-bottom: 12px;
+}
+
+/* 7. Anula el margen doble si está TALLES antes */
+.size-label + .size-chips {
+    margin-top: 0 !important;
+}
+/* Forzar que la caja del título no ocupe 2 renglones en títulos cortos */
+.card-body h4 {
+    height: auto !important;
+    min-height: 24px;
+}
+
+/* Empuje al fondo del bloque de talles */
+.size-label, 
+.card-body > .size-chips:first-of-type {
+    margin-top: auto !important;
+}
+
+/* Colores personalizados individuales por producto */
+.product-card:nth-child(1) .card-body h4 { color: #ef2a8c; } /* Producto 1 */
+.product-card:nth-child(2) .card-body h4 { color: #fcb900; } /* Producto 2 */
+.product-card:nth-child(3) .card-body h4 { color: #00d2ff; } /* Producto 3 */
+.product-card:nth-child(4) .card-body h4 { color: #2ecc71; } /* Producto 4 */
+.product-card:nth-child(5) .card-body h4 { color: #ef2a8c; } /* Producto 5 */
+.product-card:nth-child(6) .card-body h4 { color: #fcb900; } /* Producto 6 */
+.product-card:nth-child(7) .card-body h4 { color: #00d2ff; } /* Producto 7 */
+.product-card:nth-child(8) .card-body h4 { color: #2ecc71; } /* Producto 8 */
+.product-card:nth-child(9) .card-body h4 { color: #ef2a8c; } /* Producto 9 */
+.product-card:nth-child(10) .card-body h4 { color: #fcb900; } /* Producto 10 */
+.product-card:nth-child(11) .card-body h4 { color: #00d2ff; } /* Producto 11 */
+.product-card:nth-child(12) .card-body h4 { color: #2ecc71; } /* Producto 12 */
+.product-card:nth-child(13) .card-body h4 { color: #ef2a8c; } /* Producto 13 */
+.product-card:nth-child(14) .card-body h4 { color: #fcb900; } /* Producto 14 */
+.product-card:nth-child(15) .card-body h4 { color: #00d2ff; } /* Producto 15 */
+.product-card:nth-child(16) .card-body h4 { color: #2ecc71; } /* Producto 16 */
+.product-card:nth-child(17) .card-body h4 { color: #ef2a8c; } /* Producto 17 */
+.product-card:nth-child(18) .card-body h4 { color: #fcb900; } /* Producto 18 */
+.product-card:nth-child(19) .card-body h4 { color: #00d2ff; } /* Producto 19 */
+.product-card:nth-child(20) .card-body h4 { color: #2ecc71; } /* Producto 20 */
+.product-card:nth-child(21) .card-body h4 { color: #ef2a8c; } /* Producto 21 */
+.product-card:nth-child(22) .card-body h4 { color: #fcb900; } /* Producto 22 */
+.product-card:nth-child(23) .card-body h4 { color: #00d2ff; } /* Producto 23 */
+.product-card:nth-child(24) .card-body h4 { color: #2ecc71; } /* Producto 24 */
+.product-card:nth-child(25) .card-body h4 { color: #ef2a8c; } /* Producto 25 */
+.product-card:nth-child(26) .card-body h4 { color: #fcb900; } /* Producto 26 */
+.product-card:nth-child(27) .card-body h4 { color: #00d2ff; } /* Producto 27 */
+.product-card:nth-child(28) .card-body h4 { color: #2ecc71; } /* Producto 28 */
+.product-card:nth-child(29) .card-body h4 { color: #ef2a8c; } /* Producto 29 */
+.product-card:nth-child(30) .card-body h4 { color: #fcb900; } /* Producto 30 */
+.product-card:nth-child(31) .card-body h4 { color: #00d2ff; } /* Producto 31 */
+.product-card:nth-child(32) .card-body h4 { color: #2ecc71; } /* Producto 32 */
+/* 1. Oculta el precio gris en los 32 productos de un solo golpe */
+.old-price {
+    display: none !important;
+}
+
+/* 2. Le pone la franja tachada al medio a todos los precios principales (verdes) */
+.price {
+    text-decoration: line-through;
+}
+/* Botón verde estilo WhatsApp */
+.btn-whatsapp {
+    background-color: #07f880bd !important;
+    color: #ffffff !important;
+    border: 1px solid #25d3658a !important;
+    font-weight: 600;
+}
+
+.btn-whatsapp:hover {
+    background-color: #07f827bd !important;
+    border-color: #658c12 !important;
+}
+/* Oculta el buscador del header */
+header .search-bar, 
+header input[type="search"], 
+header input[placeholder*="Buscar"],
+.search-container {
+    display: none !important;
+}
+/* Oculta el ícono de Favoritos (corazón) en la cabecera y en las tarjetas de productos */
+header .fa-heart,
+header a[title*="Favoritos"],
+header button:has(.fa-heart),
+#wishlistBadge,
+.btn-wishlist,
+.card-top-actions button {
+    display: none !important;
+}
+/* Estilos para los botones del menú de la cabecera */
+.nav-link-item {
+  color: inherit !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-family: inherit !important;
+  transition: opacity 0.2s !important;
+}
+
+.nav-link-item:hover {
+  opacity: 0.75 !important;
+}
+
+/* Ventana Flotante (Modal) de Contacto */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--card-bg, #12121c);
+  color: var(--text-color, #ffffff);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #ffffff;
+}
+
+.contacto-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.contacto-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contacto-item i {
+  font-size: 1.5rem;
+}
+
+.contacto-item.telefono i { color: #0088cc; }
+.contacto-item.whatsapp i { color: #25D366; }
+.contacto-item.email i { color: #ff007f; }
+
+.contacto-item div span {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.contacto-item div strong {
+  font-size: 0.95rem;
+}

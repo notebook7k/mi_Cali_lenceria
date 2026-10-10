@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi CALI - Lencería & Ropa Interior</title>
+  <!-- Librería de Íconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Hoja de Estilos CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Checkbox invisible para alternar tema sin JS -->
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input" hidden>
+
+ <!-- Encabezado / Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo"><i class="fa-solid fa-moon"></i></div>
+        <div class="brand-text">
+          <h1>Mi CALI</h1>
+          <span>LENCERÍA & ROPA INTERIOR</span>
+        </div>
+      </div>
+
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 18px;">
+        <!-- Botones de navegación agregados pegados al sol/luna -->
+        <a href="#catalogo" class="nav-link-item">Productos</a>
+        <button type="button" class="nav-link-item" onclick="abrirModalContacto()">Contacto</button>
+
+        <!-- Botón Sol/Luna activador de tema -->
+        <label for="theme-toggle" class="icon-btn theme-toggle-btn" title="Cambiar Tema" aria-label="Cambiar Tema">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección Principal (Hero) -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text-col">
+        <div class="hero-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> NUEVA COLECCIÓN SEDUCCIÓN & CONFORT</div>
+        <h2>Siente la elegancia y sutileza en tu piel con <span class="highlight">Mi CALI</span></h2>
+        <p>Diseños exclusivos pensados para realzar tu belleza natural con la combinación perfecta de suavidad, encaje y sofisticación.</p>
+        
+        <div class="hero-buttons">
+          <a href="#catalogo" class="btn btn-pink">Ver Catálogo Completo</a>
+          <a href="#combos" class="btn btn-whatsapp btn-add-quick" data-titulo="Has tu pedido por whatsapp !!">
+            <i class="fa-brands fa-whatsapp"></i> Haz tu pedido por WhatsApp !!
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card-col">
+        <div class="hero-card">
+          <img src="img/producto-4-LARA 4650/4650LARA-4.jpg" alt="Modelo Mi Luna">
+          <div class="hero-card-caption">
+            <span class="caption-tag">EDICIÓN LIMITADA</span>
+            <h3>Encaje Sensación Seda</h3>
+            <p>Envíos inmediatos en CABA y GBA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Catálogo de Productos -->
+  <section id="catalogo" class="catalog-section">
+    <div class="catalog-container">
+      
+      <div class="catalog-header">
+        <div>
+          <h3>Nuestra Colección</h3>
+          <span class="product-count">Mostrando 12 de 12 productos</span>
+        </div>
+        <div class="catalog-sort">
+          <label for="sort-select">Ordenar por:</label>
+          <select id="sort-select">
+            <option>Destacados</option>
+            <option>Precio: Menor a Mayor</option>
+            <option>Precio: Mayor a Menor</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- ==========================================
+             PRODUCTO 1
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">CONJUNTO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-1-LARA 5825/5825LARA-1.jpg" alt="Conjunto Encaje">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>CONJUNTO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <h4>Conjunto LARA 5825</h4>
+            <p class="product-desc">CONJUNTO DE ALG Y LYC LISO CORP TRIANGULO SOFT Y LESS C ELASTICO PERS.</p>
+             <span class="size-label">Talles</span>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$24.500</span>
+                <span class="old-price">$29.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 2
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">CORPIÑO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-2-LARA 5150/5150LARA-2.jpg" alt="Corpiño Push Up">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>CORPIÑO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <h4>LARA TEENS 5150</h4>
+             <p class="product-desc">CONJUNTO DE ALG Y LYC CON ELASTICO PERSONALIZADO.</p>
+
+            <span class="size-label">Talles</span>
+            <div class="size-chips">
+              <span>85</span><span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$16.200</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 3
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">BOMBACHA</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-3-4550LARA/4550LARA-3.jpg" alt="Bombacha Colaless">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>BOMBACHA</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4550</h4>
+             <p class="product-desc">Conjunto de tul fantasia. Corpiño triangulo cruzado. Colaless </p>
+            <span class="size-label">Talles</span>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$6.800</span>
+                <span class="old-price">$8.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 4
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">PIJAMA</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-4-LARA 4650/4650LARA-4.jpg" alt="Pijama Satén">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>PIJAMA</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <h4>Conjunto LARA 4650</h4>
+             <p class="product-desc">CONJ TRIANGULO SOFT DE ALG Y LYC CON COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>05</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$38.900</span>
+                <span class="old-price">$44.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 5
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-5-LARA 4193/4193LARA-5.jpg" alt="Pack Combos">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <h4>LARA TEENS 4193</h4>
+            <p class="product-desc">CONJ. DE MICROFIBRA. CORPIÑO SOFT SIN PUSH UP DISEÑO CRUCE. COLALESS</p>
+            <div class="size-chips">
+              <span>80</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$15.200</span>
+                <span class="old-price">$18.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 6
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">PIJAMA</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-6-LARA 4285/4285LARA-6.jpg" alt="Camisón Algodón">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>PIJAMA</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+            </div>
+            <h4>LARA TEENS 4285</h4>
+            <p class="product-desc">CONJ. DE MORLEY. CORP TRIÁNGULO TAZA SOFT CON DIJE PERSONALIZADO. REGULABLE</p>
+            <div class="size-chips">
+            <span>80</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$22.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 7
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">BOMBACHA</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-7-4356LARA/4356LARA-7.jpg" alt="Culotte Encaje">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>BOMBACHA</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4356LARA</h4>
+            <p class="product-desc">CONJUNTO MICROFIBRA FANTASIA, CORPIÑO PUSH UP. COLALESS</p>
+            <div class="size-chips">
+              <span>90</span><span>95</span><span>100</span><span>105</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$7.500</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 8
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">PIJAMA</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-8-4115LARA/4115LARA-8.jpg" alt="Pijama Corto">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>PIJAMA</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4115 </h4>
+            <p class="product-desc"> CONJUNTO DE MICROFIBRA Y PUNTILLA. CORPIÑO TRIÁNGULO SOFT SIN PUSH UP. REGULABLE</p>
+            <div class="size-chips">
+              <span>80</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$28.900</span>
+                <span class="old-price">$32.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 9
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">CORPIÑO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-9-4163LARA/4163LARA-9.jpg" alt="Corpiño Bralette">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>CORPIÑO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <h4>LARA TEENS 4163</h4>
+            <p class="product-desc"> CONJUNTO DE PUNTILLA. CORPIÑO TOP TRIANGULO. TANGALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$14.500</span>
+                <span class="old-price">$17.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 10
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">CONJUNTO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-10-4178LARA/4178LARA-10.jpg" alt="Conjunto Terciopelo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>CONJUNTO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+            </div>
+            <h4>LARA 4178LARA</h4>
+            <p class="product-desc">CONJ BRALETTE DE ALG C/PUNTILLA Y VEDETINA</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$31.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 11
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-11-4725LARA/4725LARA-11.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4725LARA</h4>
+            <p class="product-desc"> CONJUNTO DE TULL FANTASIA ANIMAL PRINT CON DIJE CORAZON</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 12
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-12-4175LARA/4175LARA-12.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4175</h4>
+            <p class="product-desc">CONJUNTO MICROFIBRA FANTASÍA CORPIÑO TRIANGULITO. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 13
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-13-4120LARA/4120LARA-13.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4120</h4>
+            <p class="product-desc"> CONJUNTO DE ENCAJE CON ARO SIN TAZA. DIJE PERSONALIZADO Y COLA LESS REGULABLE</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span><span>105</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 14
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-14-4680LARA/4680LARA-14.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4680</h4>
+            <p class="product-desc"> CONJ TRIANGULO SOFT DE ALG Y LYC CON ELÁSTICO PERSONALIZADO Y COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 15
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-15-6150LARA/6150LARA-15.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 6150LARA</h4>
+            <p class="product-desc">BÓXER ALGODÓN Y LYCRA CON ELÁSTICO PERSONALIZADO</p>
+            <div class="size-chips">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 16
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-16-4280LARA/4280LARA-16.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4280</h4>
+            <p class="product-desc">CONJUNTO DE MORLEY CON DETALLE BOTON. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 17
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-17-4720LARA/4720LARA-17.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4720</h4>
+            <p class="product-desc">CONJUNTO DE TULL FANTASIA ANIMAL PRINT. CORPIÑO PUSH UP SOFT. TANGALESS REGULABLE</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 18
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-18-4385LARA/4385LARA-18.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4385 </h4>
+            <p class="product-desc">CONJUNTO DE MICROFIBRA Y PUNTILLA. CORPIÑO PUSH UP SOFT. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 19
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-19-4435LARA/4435LARA-19.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 4435 </h4>
+            <p class="product-desc">CONJUNTO ALGODON LYCRA ELASTICO 2 TONOS. CORPIÑO PUSH UP SOFT. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 20
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-20-4182LARA/4182LARA-20.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4182LARA</h4>
+            <p class="product-desc">Conjunto de tul fantasia y tela engomada. Corpiño top. Tangaless regulable. NEGRO</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 21
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-21-5160LARA/5160LARA-21.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 5160</h4>
+            <p class="product-desc">CONJUNTO DE ALG Y LYC. CORPIÑO PUSH UP SOFT CON ESPALDA TIRAS. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 22
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-22-5820LARA/5820LARA-22.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 5820LARA</h4>
+            <p class="product-desc">CONJ SOFT CON PUSH UP, ALG Y LYCRA , ELASTICO PERS LARA. CORPIÑO CON BASE. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 23
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-23-5810LARA/5810LARA-23.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 5810</h4>
+            <p class="product-desc"> CONJ TRIAG BRALETT, ALG Y L , ELASTICO PERSONALIZADO LARA. CORPIÑO TAZA DOBLE. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 24
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-24-4110LARA/4110LARA-24.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4110LARA</h4>
+            <p class="product-desc">CONJUNTO BRALETTE ALTO, ALG Y LYCRA Y CINTURA RAZADA. CORP DOBLE TAZA Y DIJE PERS. COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 25
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-25-5700LARA/5700LARA-25.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA TEENS 5700 </h4>
+            <p class="product-desc">CONJUNTO DEPORTIVO DE ALGODON Y LYCRA CON ESTAMPA LARA SPORT. CORPIÑO TOP. CULOTTE</p>
+            <div class="size-chips">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 26
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-26-6785LARA/6785LARA-26.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 6785</h4>
+            <p class="product-desc">LARA PACK X 3 DE TUL FANTASIA- TANGALESS REGULABLE. VARIOS</p>
+            <div class="size-chips">
+              <span>U</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 27
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-27-8159LARA/8159LARA-27.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 8159LARA</h4>
+            <p class="product-desc">CONJUNTO MUSCULOSA Y BOXER , MORLEY CON DETALLE PUNTILLA. PIN CEREZA</p>
+            <div class="size-chips">
+              <span>1</span><span>2</span><span>3</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 28
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-28-6700LARA/6700LARA-28.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 6700LARA</h4>
+            <p class="product-desc">PACK X 3 TANGALESS EN MORLEY , BRETEL ANCHO</p>
+            <div class="size-chips">
+              <span>U</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 29
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-29-5920LARA/5920LARA-29.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 5920</h4>
+            <p class="product-desc">CORPIÑO SOFT C/ PUSH UP, MORLEY, ESPALDA CALADA, BALLENA LATERAL Y PIC CEREZA, COLALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 30
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBO</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-30-5910LARA/5910LARA-30.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBO</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 5910LARA</h4>
+            <p class="product-desc">CORPIÑO TOP ESCOTE FRANCES , MORLEY, FORRADO, BALLENA LATERAL Y PIN CEREZA. TANGALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+          <!-- ==========================================
+             PRODUCTO 31
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">COMBOS</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-31-5800LARA/5800LARA-31.jpg" alt="Combo Duo">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>COMBOS</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 5800</h4>
+            <p class="product-desc">CONJ DEPORTIVO ALG Y L, ELAST LARA, CORP TAZA DOBLE C/BRETEL Y ESPALDA CALADA. COLALESS</p>
+            <div class="size-chips">
+              <span>1</span><span>2</span><span>3</span><span>4</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$19.900</span>
+                <span class="old-price">$24.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PRODUCTO 32
+             ========================================== -->
+        <article class="product-card">
+          <div class="card-image-wrap">
+            <span class="badge-tag badge-pink">PIJAMAS</span>
+            <button class="wishlist-btn" aria-label="Favoritos"><i class="fa-regular fa-heart"></i></button>
+            <img src="img/producto-32-4820LARA/4820LARA-32.jpg" alt="Bata Satén">
+          </div>
+          <div class="card-body">
+            <div class="card-top-info">
+              <span>PIJAMAS</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <h4>LARA 4820</h4>
+            <p class="product-desc">CONJUNTO SOFT CON PUSH UP, MORLEY Y PUNTILLA, CORP CON DIJE PERSONSALIZADO. TANGALESS</p>
+            <div class="size-chips">
+              <span>85</span><span>90</span><span>95</span><span>100</span>
+            </div>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="price">$42.000</span>
+                <span class="old-price">$48.000</span>
+              </div>
+              <button class="add-cart-btn"><i class="fa-solid fa-cart-plus"></i> Consultar</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="pagination-container" id="paginationControls"></div>
+    </div>
+  </section>
+
+  <!-- Pie de página / Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Información de la marca -->
+      <div class="footer-col">
+        <h3>Sobre Mi CALI</h3>
+        <p>Venta mayorista y minorista.</p>
+        <p>Envíos a todo el país.</p>
+        <p>Lencería, indumentaria femenina y ropa de descanso pensada para brindar confort, elegancia y estilo.</p>
+      </div>
+
+      <!-- Columna 2: Contacto y Atención -->
+      <div class="footer-col">
+        <h3>Ventas y Atención</h3>
+        <p><i class="fa-solid fa-phone"></i> +54 9 11 4068-2871</p>
+        <p><i class="fa-solid fa-envelope"></i> CALIedu@yahoo.com.ar </p>
+        <p><i class="fa-solid fa-location-dot"></i> Estamos en Buenos Aires, Argentina</p>
+      </div>
+
+    </div>
+
+    <!-- Línea inferior de copyright y créditos -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mi CALI. Todos los derechos reservados.</p>
+      <p>Diseño y Desarrollo Web creado por <a href="http://estudio@alternativa4k.com" target="_blank" rel="noopener noreferrer">estudioalternativa4k.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Ventana Flotante (Modal) de Contacto -->
+  <div id="modalContacto" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="cerrarModalContacto()">&times;</button>
+      <h3><i class="fa-solid fa-address-book"></i> Medios de Contacto</h3>
+      <p class="modal-subtitle">Comunicate directamente con nosotros:</p>
+      
+      <div class="contacto-opciones">
+        <!-- Teléfono de Llamada -->
+        <a href="tel:01140682871" class="contacto-item telefono">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span>Llamada Telefónica</span>
+            <strong>011 4068-2871</strong>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5491140682871?text=%C2%A1Hola!%20Quisiera%20hacer%20una%20consulta." target="_blank" class="contacto-item whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <span>WhatsApp</span>
+            <strong>+54 9 11 4068-2871</strong>
+          </div>
+        </a>
+
+        <!-- Correo Electrónico -->
+        <a href="mailto:contacto@miCALI.com" class="contacto-item email">
+          <i class="fa-regular fa-envelope"></i>
+          <div>
+            <span>Correo Electrónico</span>
+            <strong>CALIedu@yahoo.com.ar </strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
